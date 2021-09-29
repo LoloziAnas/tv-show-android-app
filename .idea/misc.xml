@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_tv_show.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/item_container_tv_show.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/activity_main.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/item_container_tv_show.xml" value="0.20572916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
