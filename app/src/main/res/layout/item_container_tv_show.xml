@@ -1,85 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/_4sdp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <View
+    <data>
+
+        <variable
+            name="tvShow"
+            type="com.lzitech.movies_shows_app.models.TVShow" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/riv_tv_show" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/background_tv_show"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_name" />
-
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/riv_tv_show"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="@dimen/_4sdp" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_8sdp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:includeFontPadding="false"
-        android:paddingTop="@dimen/_10sdp"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="@dimen/_13sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/riv_tv_show"
-        app:layout_constraintTop_toTopOf="@id/riv_tv_show" />
+        android:padding="@dimen/_4sdp">
 
-    <TextView
-        android:id="@+id/tv_network"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:fontFamily="@font/ubuntu_regular"
-        android:includeFontPadding="false"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintEnd_toEndOf="@id/tv_name"
-        app:layout_constraintStart_toStartOf="@id/tv_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/riv_tv_show" />
 
-    <TextView
-        android:id="@+id/tv_starter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:fontFamily="@font/ubuntu_regular"
-        android:includeFontPadding="false"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintEnd_toEndOf="@id/tv_name"
-        app:layout_constraintStart_toStartOf="@id/tv_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_network" />
-    <TextView
-        android:id="@+id/tv_status"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:fontFamily="@font/ubuntu_regular"
-        android:includeFontPadding="false"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintEnd_toEndOf="@id/tv_name"
-        app:layout_constraintStart_toStartOf="@id/tv_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_starter" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/background_tv_show"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_tv_show"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:imageURL='@{tvShow.thumbnail}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_4sdp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/_10sdp"
+            android:text='@{tvShow.name}'
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/riv_tv_show"
+            app:layout_constraintTop_toTopOf="@id/riv_tv_show" />
+
+        <TextView
+            android:id="@+id/tv_network"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:text='@{tvShow.network + "("+tvShow.country+")"}'
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_starter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:text='@{"Started on: "+tvShow.startDate}'
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_network" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:text='@{tvShow.status}'
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_starter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
