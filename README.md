@@ -8,7 +8,7 @@ to allow us to find the most popular movies playing.
 This app uses the API from [episodate.com](https://www.episodate.com/api/)
 
 ## What I learned
-- Fetch data from the Internet with theMovieDB API
+- Fetch data from the Internet with episodate API
 - Use adapters and custom list layouts to populate list views
 - Incorporate libraries to simplify the amount of code you need to write
 - Build a fully featured application that looks and feels natural on the latest Android operating system.
