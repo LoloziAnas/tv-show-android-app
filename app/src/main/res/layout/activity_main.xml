@@ -9,6 +9,10 @@
             name="isLoading"
             type="Boolean" />
 
+        <variable
+            name="isLoadingMore"
+            type="Boolean" />
+
         <import type="android.view.View" />
     </data>
 
@@ -73,7 +77,10 @@
             android:layout_height="0dp"
             android:clipToPadding="false"
             android:orientation="vertical"
-            android:padding="@dimen/_4sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_header" />
@@ -86,5 +93,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_header" />
+
+        <ProgressBar
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:visibility="@{isLoadingMore ? View.VISIBLE: View.GONE, default = gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
