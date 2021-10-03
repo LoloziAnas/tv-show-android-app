@@ -8,11 +8,12 @@ import com.lzitech.movies_shows_app.responses.TVShowResponse;
 
 public class MostPopularTVShowsViewModel extends ViewModel {
     private MostPopularTVShowsRepository mostPopularTVShowsRepository;
-    public MostPopularTVShowsViewModel(){
+
+    public MostPopularTVShowsViewModel() {
         mostPopularTVShowsRepository = new MostPopularTVShowsRepository();
     }
 
-    public LiveData<TVShowResponse> getMostPopularTVShows(int page){
+    public LiveData<TVShowResponse> getMostPopularTVShows(int page) {
         return mostPopularTVShowsRepository.getMostPopularTVShows(page);
     }
 }

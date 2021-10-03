@@ -19,17 +19,18 @@ public class MostPopularTVShowsRepository {
         apiService = ApiClient.getRetrofit().create(ApiService.class);
 
     }
-    public LiveData<TVShowResponse> getMostPopularTVShows(int page){
+
+    public LiveData<TVShowResponse> getMostPopularTVShows(int page) {
         MutableLiveData<TVShowResponse> data = new MutableLiveData<>();
 
         apiService.getMostPopularTvShows(page).enqueue(new Callback<TVShowResponse>() {
             @Override
-            public void onResponse(@NonNull Call<TVShowResponse> call,@NonNull Response<TVShowResponse> response) {
+            public void onResponse(@NonNull Call<TVShowResponse> call, @NonNull Response<TVShowResponse> response) {
                 data.setValue(response.body());
             }
 
             @Override
-            public void onFailure(@NonNull Call<TVShowResponse> call,@NonNull Throwable t) {
+            public void onFailure(@NonNull Call<TVShowResponse> call, @NonNull Throwable t) {
                 data.setValue(null);
             }
         });
