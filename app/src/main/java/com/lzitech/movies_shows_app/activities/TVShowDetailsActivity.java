@@ -6,9 +6,11 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.lzitech.movies_shows_app.R;
+import com.lzitech.movies_shows_app.adapters.ImageSliderAdapter;
 import com.lzitech.movies_shows_app.databinding.ActivityTvshowDetailsBinding;
 import com.lzitech.movies_shows_app.viewModels.TVShowDetailsViewModel;
 
@@ -34,7 +36,19 @@ public class TVShowDetailsActivity extends AppCompatActivity {
         long id = getIntent().getLongExtra("id", -1);
         tvShowDetailsViewModel.getTVShowDetails(id).observe(this, tvShowDetailsResponse -> {
             activityTvshowDetailsBinding.setIsLoading(false);
-            Toast.makeText(getApplicationContext(), "" + tvShowDetailsResponse.getTvShowDetails().getUrl(), Toast.LENGTH_LONG).show();
+            if (tvShowDetailsResponse.getTvShowDetails() != null) {
+                if (tvShowDetailsResponse.getTvShowDetails().getPictures() != null) {
+                    loadImageSlider(tvShowDetailsResponse.getTvShowDetails().getPictures());
+                }
+            }
         });
+    }
+
+    private void loadImageSlider(String[] sliderImages) {
+        activityTvshowDetailsBinding.sliderViewPager.setOffscreenPageLimit(1);
+        activityTvshowDetailsBinding.sliderViewPager.setAdapter(new ImageSliderAdapter(sliderImages));
+        activityTvshowDetailsBinding.sliderViewPager.setVisibility(View.VISIBLE);
+        activityTvshowDetailsBinding.viewFadingEdge.setVisibility(View.VISIBLE);
+
     }
 }
