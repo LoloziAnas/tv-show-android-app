@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_fading_edge.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_slider_indicator_active.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_slider_indicator_inactive.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_tv_show.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/item_container_tv_show.xml" value="0.221875" />
