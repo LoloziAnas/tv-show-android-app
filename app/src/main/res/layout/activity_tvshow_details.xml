@@ -42,6 +42,19 @@
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/view_fading_edge"
             />
+        <ImageButton
+            android:id="@+id/image_button_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/background_button"
+            android:src="@drawable/ic_back"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_8sdp"
+            app:tint="@color/primaryColor"/>
         <ProgressBar
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"

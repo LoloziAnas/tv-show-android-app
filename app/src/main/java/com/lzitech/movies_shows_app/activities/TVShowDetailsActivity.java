@@ -7,12 +7,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.lzitech.movies_shows_app.R;
 import com.lzitech.movies_shows_app.adapters.ImageSliderAdapter;
@@ -33,6 +31,7 @@ public class TVShowDetailsActivity extends AppCompatActivity {
 
     private void doInitialization() {
         tvShowDetailsViewModel = new ViewModelProvider(this).get(TVShowDetailsViewModel.class);
+        activityTvshowDetailsBinding.imageButtonBack.setOnClickListener(v -> onBackPressed());
         getTVShowDetails();
     }
 
