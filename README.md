@@ -24,4 +24,4 @@ This app uses the API from [episodate.com](https://www.episodate.com/api/)
 - [Picasso](http://square.github.io/picasso/) for image loading
 
 ## Screenshots
-![popular-movies-main](https://user-images.githubusercontent.com/33213229/49940286-757e9100-ff22-11e8-897a-45ba561df250.png)
+![popular-movies-main] (https://user-images.githubusercontent.com/33213229/49940286-757e9100-ff22-11e8-897a-45ba561df250.png)
