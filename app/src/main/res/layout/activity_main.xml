@@ -43,7 +43,7 @@
                 android:includeFontPadding="false"
                 android:maxLines="1"
                 android:text="@string/tv_show_most_popular"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/colorWhite"
                 android:textSize="@dimen/_14ssp"
 
                 />
@@ -57,7 +57,7 @@
                 android:contentDescription="@string/app_name"
                 android:padding="2dp"
                 android:src="@drawable/ic_watchlist"
-                app:tint="@color/secondaryTextColor" />
+                app:tint="@color/colorWhite" />
 
             <ImageView
                 android:id="@+id/iv_search"
@@ -68,7 +68,7 @@
                 android:contentDescription="@string/app_name"
                 android:padding="2dp"
                 android:src="@drawable/ic_search"
-                app:tint="@color/secondaryTextColor" />
+                app:tint="@color/colorWhite" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.lzitech.movies_shows_app.R;
 import com.lzitech.movies_shows_app.adapters.TVShowsAdapter;
+import com.lzitech.movies_shows_app.constants.Utils;
 import com.lzitech.movies_shows_app.databinding.ActivityMainBinding;
 import com.lzitech.movies_shows_app.listeners.TVShowListener;
 import com.lzitech.movies_shows_app.models.TVShow;
@@ -91,12 +92,12 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
     @Override
     public void onTVShowClicked(TVShow tvShow) {
         Intent intent = new Intent(getApplicationContext(), TVShowDetailsActivity.class);
-        intent.putExtra("id", tvShow.getId());
-        intent.putExtra("name", tvShow.getName());
-        intent.putExtra("country", tvShow.getCountry());
-        intent.putExtra("start-date", tvShow.getStartDate());
-        intent.putExtra("network", tvShow.getNetwork());
-        intent.putExtra("status", tvShow.getStatus());
+        intent.putExtra(Utils.ID, tvShow.getId());
+        intent.putExtra(Utils.NAME, tvShow.getName());
+        intent.putExtra(Utils.COUNTRY, tvShow.getCountry());
+        intent.putExtra(Utils.START_DATE, tvShow.getStartDate());
+        intent.putExtra(Utils.NETWORK, tvShow.getNetwork());
+        intent.putExtra(Utils.STATUS, tvShow.getStatus());
         startActivity(intent);
     }
 }
