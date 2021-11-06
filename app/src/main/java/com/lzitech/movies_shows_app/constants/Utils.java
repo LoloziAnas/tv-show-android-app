@@ -9,5 +9,7 @@ public class Utils {
     public static final String NETWORK = "network";
     public static final String STATUS = "status";
     public static final String READ_ME = "Read More";
+    public static final String TV_SHOW = "tvShow";
+
 
 }

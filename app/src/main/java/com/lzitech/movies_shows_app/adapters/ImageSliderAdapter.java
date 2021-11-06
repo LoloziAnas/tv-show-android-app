@@ -1,7 +1,6 @@
 package com.lzitech.movies_shows_app.adapters;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,7 @@ import com.lzitech.movies_shows_app.databinding.ItemContainerSliderImageBinding;
 
 public class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.ImageSliderViewHolder> {
 
-    private String[] sliderImages;
+    private final String[] sliderImages;
     private LayoutInflater layoutInflater;
 
     public ImageSliderAdapter(String[] sliderImages) {
@@ -46,7 +45,7 @@ public class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.
     }
 
     static class ImageSliderViewHolder extends RecyclerView.ViewHolder {
-        private ItemContainerSliderImageBinding itemContainerSliderImageBinding;
+        private final ItemContainerSliderImageBinding itemContainerSliderImageBinding;
 
         public ImageSliderViewHolder(ItemContainerSliderImageBinding itemContainerSliderImageBinding) {
             super(itemContainerSliderImageBinding.getRoot());

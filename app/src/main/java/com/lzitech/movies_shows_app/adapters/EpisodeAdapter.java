@@ -15,7 +15,7 @@ import java.util.List;
 
 public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeViewHolder> {
 
-    private List<Episode> episodes;
+    private final List<Episode> episodes;
     private LayoutInflater layoutInflater;
 
     public EpisodeAdapter(List<Episode> episodes) {

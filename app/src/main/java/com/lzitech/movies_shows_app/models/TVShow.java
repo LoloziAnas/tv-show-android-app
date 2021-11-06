@@ -1,8 +1,15 @@
 package com.lzitech.movies_shows_app.models;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
-public class TVShow {
+import java.io.Serializable;
+
+@Entity(tableName = "tvShow")
+public class TVShow implements Serializable {
+    @PrimaryKey
     @SerializedName("id")
     private Long id;
     @SerializedName("name")
@@ -73,4 +80,5 @@ public class TVShow {
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
+
 }
