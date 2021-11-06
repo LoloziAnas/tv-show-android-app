@@ -8,6 +8,8 @@ public class Episode {
     private String season;
     @SerializedName("episode")
     private String episode;
+    @SerializedName("name")
+    private String name;
     @SerializedName("air_date")
     private String airDate;
 
@@ -21,5 +23,9 @@ public class Episode {
 
     public String getAirDate() {
         return airDate;
+    }
+
+    public String getName() {
+        return name;
     }
 }
