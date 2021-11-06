@@ -52,10 +52,9 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeV
         }
 
         public void bindEpisode(Episode episode) {
-            String title = "S";
             String season = episode.getSeason();
             String nbEpisode = episode.getEpisode();
-            title.concat(season).concat(" E").concat(nbEpisode);
+            String title = "S".concat(season).concat(" E").concat(nbEpisode);
             itemContainerEpisodesBinding.setTitle(title);
             itemContainerEpisodesBinding.setName(episode.getName());
             itemContainerEpisodesBinding.setAirDate(episode.getAirDate());

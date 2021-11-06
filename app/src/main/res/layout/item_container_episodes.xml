@@ -19,7 +19,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_tv_show"
+        android:background="@color/primaryLightColor"
         android:layout_margin="@dimen/_8sdp"
         android:padding="@dimen/_8sdp"
         android:orientation="vertical">
@@ -30,7 +30,7 @@
             android:text="@{title}"
             android:fontFamily="@font/ubuntu_bold"
             android:textSize="@dimen/_13ssp"
-            android:textColor="@color/primaryLightColor"/>
+            android:textColor="@color/colorWhite"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:includeFontPadding="false"
             android:text="@{name}"
-            android:textColor="@color/primaryLightColor"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/_12sdp"/>
         <TextView
             android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:fontFamily="@font/ubuntu_regular"
             android:includeFontPadding="false"
             android:text='@{"Air Date: "+ airDate}'
-            android:textColor="@color/primaryLightColor"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/_10ssp"
             />
 

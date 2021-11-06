@@ -1,11 +1,14 @@
 package com.lzitech.movies_shows_app.activities;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -16,10 +19,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.lzitech.movies_shows_app.R;
+import com.lzitech.movies_shows_app.adapters.EpisodeAdapter;
 import com.lzitech.movies_shows_app.adapters.ImageSliderAdapter;
 import com.lzitech.movies_shows_app.constants.Utils;
 import com.lzitech.movies_shows_app.databinding.ActivityTvshowDetailsBinding;
+import com.lzitech.movies_shows_app.databinding.LayoutEpisodeBottomSheetBinding;
 import com.lzitech.movies_shows_app.viewModels.TVShowDetailsViewModel;
 
 import java.util.Locale;
@@ -28,6 +35,8 @@ public class TVShowDetailsActivity extends AppCompatActivity {
 
     private ActivityTvshowDetailsBinding activityTvshowDetailsBinding;
     private TVShowDetailsViewModel tvShowDetailsViewModel;
+    private BottomSheetDialog episodeBottomSheetDialog;
+    private LayoutEpisodeBottomSheetBinding layoutEpisodeBottomSheetBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +106,44 @@ public class TVShowDetailsActivity extends AppCompatActivity {
                 });
                 activityTvshowDetailsBinding.buttonWebsite.setVisibility(View.VISIBLE);
                 activityTvshowDetailsBinding.buttonEpisodes.setVisibility(View.VISIBLE);
+                activityTvshowDetailsBinding.buttonEpisodes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (episodeBottomSheetDialog == null) {
+                            episodeBottomSheetDialog = new BottomSheetDialog(TVShowDetailsActivity.this);
+                            layoutEpisodeBottomSheetBinding = DataBindingUtil.inflate(
+                                    LayoutInflater.from(TVShowDetailsActivity.this),
+                                    R.layout.layout_episode_bottom_sheet,
+                                    findViewById(R.id.episodes_container),
+                                    false
+                            );
+                            episodeBottomSheetDialog.setContentView(layoutEpisodeBottomSheetBinding.getRoot());
+                            layoutEpisodeBottomSheetBinding.episodesRecyclerView.setAdapter(
+                                    new EpisodeAdapter(tvShowDetailsResponse.getTvShowDetails().getEpisodes())
+                            );
+                            layoutEpisodeBottomSheetBinding.textViewTitle.setText(
+                                    String.format("Episodes | %s", getIntent().getStringExtra("name"))
+                            );
+                            layoutEpisodeBottomSheetBinding.imageButtonClose.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    episodeBottomSheetDialog.dismiss();
+                                }
+                            });
+                        }
+                        // optional section start
+                        FrameLayout frameLayout = episodeBottomSheetDialog.findViewById(
+                                com.google.android.material.R.id.design_bottom_sheet
+                        );
+                        if (frameLayout!= null){
+                            BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(frameLayout);
+                            bottomSheetBehavior.setPeekHeight(Resources.getSystem().getDisplayMetrics().heightPixels);
+                            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                        }
+                        // optional section end
+                        episodeBottomSheetDialog.show();
+                    }
+                });
                 loadBasicTVShowDetails();
             }
         });
