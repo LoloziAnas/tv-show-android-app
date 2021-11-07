@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -31,6 +32,10 @@ import com.lzitech.movies_shows_app.models.TVShow;
 import com.lzitech.movies_shows_app.viewModels.TVShowDetailsViewModel;
 
 import java.util.Locale;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class TVShowDetailsActivity extends AppCompatActivity {
 
@@ -138,7 +143,7 @@ public class TVShowDetailsActivity extends AppCompatActivity {
                         FrameLayout frameLayout = episodeBottomSheetDialog.findViewById(
                                 com.google.android.material.R.id.design_bottom_sheet
                         );
-                        if (frameLayout!= null){
+                        if (frameLayout != null) {
                             BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(frameLayout);
                             bottomSheetBehavior.setPeekHeight(Resources.getSystem().getDisplayMetrics().heightPixels);
                             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
@@ -147,6 +152,19 @@ public class TVShowDetailsActivity extends AppCompatActivity {
                         episodeBottomSheetDialog.show();
                     }
                 });
+                activityTvshowDetailsBinding.imageButtonWatchList.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new CompositeDisposable().add(tvShowDetailsViewModel.addToWatchList(tvShow)
+                                .subscribeOn(Schedulers.io())
+                                .observeOn(AndroidSchedulers.mainThread())
+                                .subscribe(() -> {
+                                    activityTvshowDetailsBinding.imageButtonWatchList.setImageResource(R.drawable.ic_check);
+                                    Toast.makeText(getApplicationContext(), "Added to WatchList", Toast.LENGTH_SHORT).show();
+                                }));
+                    }
+                });
+                activityTvshowDetailsBinding.imageButtonWatchList.setVisibility(View.VISIBLE);
                 loadBasicTVShowDetails();
             }
         });
