@@ -1,15 +1,14 @@
 package com.lzitech.movies_shows_app.activities;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Toast;
 
 import com.lzitech.movies_shows_app.R;
 import com.lzitech.movies_shows_app.adapters.TVShowsAdapter;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
 
     private ActivityMainBinding activityMainBinding;
     private MostPopularTVShowsViewModel mostPopularTVShowsViewModel;
-    private List<TVShow> tvShows = new ArrayList<>();
+    private final List<TVShow> tvShows = new ArrayList<>();
     private TVShowsAdapter adapter;
     private int currentPage = 1;
     private int totalAvailablePages = 1;
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
                 }
             }
         });
+        activityMainBinding.ivWatchlist.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WatchListActivity.class)));
         getMostPopularTVShows();
     }
 
@@ -74,17 +74,9 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
 
     private void toggleLoading() {
         if (currentPage == 1) {
-            if (activityMainBinding.getIsLoading() != null && activityMainBinding.getIsLoading()) {
-                activityMainBinding.setIsLoading(false);
-            } else {
-                activityMainBinding.setIsLoading(true);
-            }
+            activityMainBinding.setIsLoading(activityMainBinding.getIsLoading() == null || !activityMainBinding.getIsLoading());
         } else {
-            if (activityMainBinding.getIsLoadingMore() != null && activityMainBinding.getIsLoadingMore()) {
-                activityMainBinding.setIsLoadingMore(false);
-            } else {
-                activityMainBinding.setIsLoadingMore(true);
-            }
+            activityMainBinding.setIsLoadingMore(activityMainBinding.getIsLoadingMore() == null || !activityMainBinding.getIsLoadingMore());
         }
 
     }
