@@ -23,6 +23,6 @@ public interface TVShowDao {
     Completable addToWatchList(TVShow tvShow);
 
     @Delete
-    void removeFromWatchList(TVShow tvShow);
+    Completable removeFromWatchList(TVShow tvShow);
 
 }
