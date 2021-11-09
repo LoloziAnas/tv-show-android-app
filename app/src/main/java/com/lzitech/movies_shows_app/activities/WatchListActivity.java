@@ -22,6 +22,7 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.internal.Util;
 
 public class WatchListActivity extends AppCompatActivity implements WatchListListener {
 
@@ -41,7 +42,7 @@ public class WatchListActivity extends AppCompatActivity implements WatchListLis
         watchListViewModel = new ViewModelProvider(this).get(WatchListViewModel.class);
         activityWatchListBinding.imageButtonBack.setOnClickListener(v -> onBackPressed());
         watchlist = new ArrayList<>();
-
+        loadWatchList();
     }
 
     private void loadWatchList() {
@@ -65,7 +66,10 @@ public class WatchListActivity extends AppCompatActivity implements WatchListLis
     @Override
     protected void onResume() {
         super.onResume();
-        loadWatchList();
+        if (Utils.IS_WATCHLIST_UPDATED){
+            loadWatchList();
+            Utils.IS_WATCHLIST_UPDATED = false;
+        }
     }
 
     @Override
