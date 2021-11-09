@@ -63,7 +63,7 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:fontFamily="@font/ubuntu_regular"
             android:includeFontPadding="false"
-            android:text='@{tvShow.network + "("+tvShow.country+")"}'
+            android:text='@{tvShow.network + " ("+tvShow.country+")"}'
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintEnd_toEndOf="@id/tv_name"
@@ -92,7 +92,7 @@
             android:fontFamily="@font/ubuntu_regular"
             android:includeFontPadding="false"
             android:text='@{tvShow.status}'
-            android:textColor="@color/primaryTextColor"
+            android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintEnd_toEndOf="@id/tv_name"
             app:layout_constraintStart_toStartOf="@id/tv_name"
@@ -105,7 +105,7 @@
             android:layout_marginEnd="@dimen/_4sdp"
             android:layout_marginRight="@dimen/_4sdp"
             android:layout_marginBottom="@dimen/_8sdp"
-            android:background="@color/primaryColor"
+            android:background="@android:color/transparent"
             android:src="@drawable/ic_delete"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
