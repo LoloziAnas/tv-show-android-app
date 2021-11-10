@@ -165,7 +165,7 @@ public class TVShowDetailsActivity extends AppCompatActivity {
                                     isTVShowAvailableInWatchlist = false;
                                     Utils.IS_WATCHLIST_UPDATED = true;
                                     activityTvshowDetailsBinding.imageButtonWatchList.setImageResource(R.drawable.ic_watchlist);
-                                    Toast.makeText(getApplicationContext(), "Removed from  WatchList", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Removed from  Watchlist", Toast.LENGTH_SHORT).show();
                                     compositeDisposable.dispose();
                                 }));
                     } else {
@@ -175,7 +175,7 @@ public class TVShowDetailsActivity extends AppCompatActivity {
                                 .subscribe(() -> {
                                     Utils.IS_WATCHLIST_UPDATED = true;
                                     activityTvshowDetailsBinding.imageButtonWatchList.setImageResource(R.drawable.ic_check);
-                                    Toast.makeText(getApplicationContext(), "Added to WatchList", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Added to Watchlist", Toast.LENGTH_SHORT).show();
                                     compositeDisposable.dispose();
                                 }));
 

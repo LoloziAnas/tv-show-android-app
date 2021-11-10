@@ -7,16 +7,19 @@
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_details.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_fab.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_fading_edge.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_gradient.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_main.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_slider_indicator_active.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_slider_indicator_inactive.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/background_tv_show.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.221875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/item_container_tv_show.xml" value="0.221875" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/drawable/splash_background.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/activity_main.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/activity_tvshow_details.xml" value="0.18018018018018017" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/activity_watch_list.xml" value="0.25" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/alert_dialog_network.xml" value="0.2046875" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/item_container_episodes.xml" value="0.17142857142857143" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/item_container_slider_image.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/MoviesShowsApp/app/src/main/res/layout/item_container_tv_show.xml" value="0.33" />
