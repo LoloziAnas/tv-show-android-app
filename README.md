@@ -25,4 +25,4 @@ This app uses the API from [episodate.com](https://www.episodate.com/api/)
 - [RxAndroid: Reactive Extensions for Android](https://github.com/ReactiveX/RxAndroid) for writing reactive components in Android applications easy and hassle-free.
 
 ## Screenshots
-![popular-movies-main](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/details-screen.jpg)
+![splash-screen](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/splash-screen.jpg)![popular-movies-main](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/main-screen.jpg)![popular-movies-details](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/details-screen.jpg)![search-screen](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/search-screen.jpg)![popular-movies-watchlist](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/watchlist-screen.jpg)![episodes-screen](https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/episodes-screen.jpg)
