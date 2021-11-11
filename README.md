@@ -25,4 +25,4 @@ This app uses the API from [episodate.com](https://www.episodate.com/api/)
 - [RxAndroid: Reactive Extensions for Android](https://github.com/ReactiveX/RxAndroid) for writing reactive components in Android applications easy and hassle-free.
 
 ## Screenshots
-![popular-movies-main] (https://user-images.githubusercontent.com/33213229/49940286-757e9100-ff22-11e8-897a-45ba561df250.png)
+![popular-movies-main](screenshoots/Screen Main.png)
