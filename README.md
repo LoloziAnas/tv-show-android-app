@@ -25,7 +25,7 @@ This app uses the API from [episodate.com](https://www.episodate.com/api/)
 - [RxAndroid: Reactive Extensions for Android](https://github.com/ReactiveX/RxAndroid) for writing reactive components in Android applications easy and hassle-free.
 
 ## Video
-Here is the link to view a video demonstrating the app: https://www.youtube.com/watch?v=G9U5nWYtQwM
+Here is the link to view a video demonstrating the app: [Click here](https://www.youtube.com/watch?v=G9U5nWYtQwM)
 ## Screenshots
 <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/splash-screen.jpg" width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/main-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/details-screen.jpg"  width="235" height="493">
 <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/search-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/watchlist-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/episodes-screen.jpg"  width="235" height="493">
