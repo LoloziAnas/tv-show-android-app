@@ -13,7 +13,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MostPopularTVShowsRepository {
-    private ApiService apiService;
+    private final ApiService apiService;
 
     public MostPopularTVShowsRepository() {
         apiService = ApiClient.getRetrofit().create(ApiService.class);

@@ -15,6 +15,7 @@ import io.reactivex.Flowable;
 
 public class WatchListViewModel extends AndroidViewModel {
     private TVShowDatabase tvShowDatabase;
+    
     public WatchListViewModel(@NonNull Application application) {
         super(application);
         tvShowDatabase = TVShowDatabase.getTvShowDatabase(application);
