@@ -24,5 +24,17 @@ This app uses the API from [episodate.com](https://www.episodate.com/api/)
 - [Picasso](http://square.github.io/picasso/) for image loading
 - [RxAndroid: Reactive Extensions for Android](https://github.com/ReactiveX/RxAndroid) for writing reactive components in Android applications easy and hassle-free.
 
+## Video
+Here is the link to view a video demonstrating the app: [Click here](https://www.youtube.com/watch?v=G9U5nWYtQwM)
 ## Screenshots
-![popular-movies-main](screenshoots/Screen Main.png)
+<img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/splash-screen.jpg" width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/main-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/details-screen.jpg"  width="235" height="493">
+<img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/search-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/watchlist-screen.jpg"  width="235" height="493">  <img src="https://github.com/LoloziAnas/tv-show-android-app/blob/master/screenshots/episodes-screen.jpg"  width="235" height="493">
+
+## License
+MIT License, see the [LICENSE](LICENSE) file.
+
+## Support
+* Found this project useful ❤️? Support by clicking the ⭐️ button on the upper right of this page. ✌️
+* Notice anything else missing? File an issue
+* Feel free to contribute in any way to the project from typos in docs to code review are all welcome.
+
