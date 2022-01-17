@@ -3,7 +3,6 @@ package com.lzitech.movies_shows_app.activities;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +16,8 @@ import com.lzitech.movies_shows_app.constants.Utils;
 import com.lzitech.movies_shows_app.databinding.ActivityMainBinding;
 import com.lzitech.movies_shows_app.listeners.TVShowListener;
 import com.lzitech.movies_shows_app.models.TVShow;
+import com.lzitech.movies_shows_app.repositories.MostPopularTVShowsRepository;
+import com.lzitech.movies_shows_app.viewModels.MostPopularTVShowViewModelFactory;
 import com.lzitech.movies_shows_app.viewModels.MostPopularTVShowsViewModel;
 
 import java.util.ArrayList;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
     private int currentPage = 1;
     private int totalAvailablePages = 1;
 
+    private MostPopularTVShowViewModelFactory mostPopularTVShowViewModelFactory;
+    private MostPopularTVShowsRepository mostPopularTVShowsRepository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +42,16 @@ public class MainActivity extends AppCompatActivity implements TVShowListener {
         doInitialization();
     }
 
+    private void initMostPopularTVShowViewModel() {
+        mostPopularTVShowsRepository = new MostPopularTVShowsRepository();
+        mostPopularTVShowViewModelFactory = new MostPopularTVShowViewModelFactory(mostPopularTVShowsRepository);
+        mostPopularTVShowsViewModel = new ViewModelProvider(this, mostPopularTVShowViewModelFactory).get(MostPopularTVShowsViewModel.class);
+    }
+
     private void doInitialization() {
+        initMostPopularTVShowViewModel();
         activityMainBinding.tvShowRecyclerView.setHasFixedSize(true);
-        mostPopularTVShowsViewModel = new ViewModelProvider(this).get(MostPopularTVShowsViewModel.class);
+        //mostPopularTVShowsViewModel = new ViewModelProvider(this).get(MostPopularTVShowsViewModel.class);
         adapter = new TVShowsAdapter(tvShows, this);
         activityMainBinding.tvShowRecyclerView.setAdapter(adapter);
         activityMainBinding.tvShowRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {

@@ -8,10 +8,16 @@ import com.lzitech.movies_shows_app.responses.TVShowResponse;
 
 public class SearchViewModel extends ViewModel {
     private SearchTVShowRepository searchTVShowRepository;
-    public SearchViewModel(){
+
+    public SearchViewModel() {
         this.searchTVShowRepository = new SearchTVShowRepository();
     }
-    public LiveData<TVShowResponse> searchTVShow(String query, int page){
+
+    public SearchViewModel(SearchTVShowRepository searchTVShowRepository) {
+        this.searchTVShowRepository = searchTVShowRepository;
+    }
+
+    public LiveData<TVShowResponse> searchTVShow(String query, int page) {
         return searchTVShowRepository.searchTVShow(query, page);
     }
 }

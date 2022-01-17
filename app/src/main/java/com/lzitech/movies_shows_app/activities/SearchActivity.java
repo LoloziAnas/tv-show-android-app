@@ -21,6 +21,7 @@ import com.lzitech.movies_shows_app.databinding.ActivitySearchBinding;
 import com.lzitech.movies_shows_app.listeners.TVShowListener;
 import com.lzitech.movies_shows_app.models.TVShow;
 import com.lzitech.movies_shows_app.viewModels.SearchViewModel;
+import com.lzitech.movies_shows_app.viewModels.SearchViewModelFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +47,7 @@ public class SearchActivity extends AppCompatActivity implements TVShowListener 
 
     private void doInitialization() {
         searchViewModel = new ViewModelProvider(this).get(SearchViewModel.class);
+        //searchViewModel = new ViewModelProvider(this, ).get(SearchViewModel.class);
         activitySearchBinding.imageButtonBack.setOnClickListener(v -> onBackPressed());
         tvShowsAdapter = new TVShowsAdapter(tvShows, this);
         activitySearchBinding.recyclerViewTvShow.setAdapter(tvShowsAdapter);
